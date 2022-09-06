@@ -9,14 +9,14 @@
 }
 
 :root {
-    --main-color-900: #7FB77E;
-    --main-color-400: #d8edda;
-    --main-color-100: #f9f9ef;
-    --border-color: rgb(160, 160, 160);
+    --main-color-900: #92e891;
+    --main-color-400: #282928;
+    --main-color-100: #000000;
+    --border-color: rgb(33, 33, 33);
 }
 
 body {
-    background-color: var(--main-color-900);
+    background-color: rgb(28, 27, 34);
 }
 
 .container {
@@ -41,6 +41,7 @@ body {
 
 .calculator button {
     cursor: pointer;
+    color: white;
     font-size: 1rem;
     outline: none;
     line-height: ;
@@ -50,13 +51,19 @@ body {
 }
 
 .button:hover {
-    background-color: var(--hover-color);
+    background-color: var(--main-color-900);
+    color: var(--main-color-100);
     transition: 0.5s ease-in-out;
 }
 
-.calculator button:first-of-type, .calculator button:last-of-type  {
+button:first-of-type,button:last-of-type  {
     background-color: var(--main-color-900);
     color: var(--main-color-100);
+}
+
+button:first-of-type:hover,button:last-of-type:hover  {
+    background-color: var(--main-color-100);
+    color: var(--main-color-900);
 }
 
 .display {
