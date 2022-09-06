@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 :root {
-    --main-color-900: #5e814b;
+    --main-color-900: rgb(64, 121, 126);
     --main-color-400: white;
     --main-color-100: #272727;
     --black-color: black;
@@ -50,11 +50,16 @@
 .greetings{
     color: var(--main-color-100);
     line-height: 1.6;
+    padding: 1rem;
 }
 
 .greetings h1 {
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 0.8rem;
+}
+
+.greetings p {
+    color: rgb(92, 92, 92);
 }
 
 .container {
@@ -109,4 +114,36 @@ button:first-of-type:hover,button:last-of-type:hover  {
     color: --main-color-400;
     border: 1px solid var(--border-color);
     margin-bottom: 1rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .page1 {
+        grid-template-columns: 1fr;
+        margin-top: 4rem;
+    }
+
+    .greetings {
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
