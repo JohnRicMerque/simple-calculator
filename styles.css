@@ -8,32 +8,70 @@
     font-weight: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 :root {
-    --main-color-900: #92e891;
-    --main-color-400: #282928;
-    --main-color-100: #000000;
-    --border-color: rgb(33, 33, 33);
+    --main-color-900: #5e814b;
+    --main-color-400: white;
+    --main-color-100: #272727;
+    --black-color: black;
 }
 
-body {
-    background-color: rgb(28, 27, 34);
+.page1 {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* curve */
+.custom-shape-divider-top-1662473124 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1662473124 svg {
+    position: relative;
+    display: block;
+    width: calc(161% + 1.3px);
+    height: 186px;
+}
+
+.custom-shape-divider-top-1662473124 .shape-fill {
+    fill: #09383bd9;
+}
+
+.greetings{
+    color: var(--main-color-100);
+    line-height: 1.6;
+}
+
+.greetings h1 {
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 0.8rem;
 }
 
 .container {
-    display:grid;
-    place-items: center;
     border-radius: 2%;
     background-color: var(--main-color-100);
     width: 280px;
-    margin: 2rem auto auto auto;
+    max-height: 461px;
+    height: auto;
     padding: 1rem;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.5);
 }
 
 .calculator {
     display: grid;
     align-content: center;
     gap: 1px;
-    min-height: 80%;
+    height: auto;
     max-width: 280px;
     grid-template-columns: repeat(4, 60px);
     grid-template-rows: minmax(120px, auto) repeat(5, 60px);
@@ -41,7 +79,6 @@ body {
 
 .calculator button {
     cursor: pointer;
-    color: white;
     font-size: 1rem;
     outline: none;
     line-height: ;
@@ -52,13 +89,13 @@ body {
 
 .button:hover {
     background-color: var(--main-color-900);
-    color: var(--main-color-100);
+    color: var(--main-color-400);
     transition: 0.5s ease-in-out;
 }
 
 button:first-of-type,button:last-of-type  {
     background-color: var(--main-color-900);
-    color: var(--main-color-100);
+    color: var(--main-color-400);
 }
 
 button:first-of-type:hover,button:last-of-type:hover  {
@@ -68,7 +105,8 @@ button:first-of-type:hover,button:last-of-type:hover  {
 
 .display {
     grid-column: 1 / -1;
-    background-color: var(--main-color-400);
+    background-color: var(--black-color);
+    color: --main-color-400;
     border: 1px solid var(--border-color);
     margin-bottom: 1rem;
 }
