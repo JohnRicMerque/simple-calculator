@@ -111,7 +111,7 @@ button:first-of-type:hover,button:last-of-type:hover  {
 .display {
     grid-column: 1 / -1;
     background-color: var(--black-color);
-    color: --main-color-400;
+    color: var(--main-color-400);
     border: 1px solid var(--border-color);
     margin-bottom: 1rem;
 }

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="script.js"></script>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    <script defer type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <div class="page1">
@@ -23,29 +24,29 @@
         <div class="container">
             <div class="calculator">
                 <div class="display">
-                    <div class="previous-output"></div>
-                    <div class="current-output"></div>
+                    <div data-previous-display class="previous-output"></div>
+                    <div data-current-display class="current-output"></div>
                 </div>
-                <button class="button">AC</button>
-                <button class="button">/</button>
-                <button class="button">x</button>
-                <button class="button">←</button>
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button">-</button>
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button">+</button>
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button">.</button>
-                <button class="button">(</button>
-                <button class="button">0</button>
-                <button class="button">)</button>
-                <button class="button">=</button>
+                <button data-clear class="button">AC</button>
+                <button data-operation class="button">/</button>
+                <button data-operation class="button">x</button>
+                <button data-del class="button">←</button>
+                <button data-num class="button">7</button>
+                <button data-num class="button">8</button>
+                <button data-num class="button">9</button>
+                <button data-operation class="button">-</button>
+                <button data-num class="button">4</button>
+                <button data-num class="button">5</button>
+                <button data-num class="button">6</button>
+                <button data-operation class="button">+</button>
+                <button data-num class="button">1</button>
+                <button data-num class="button">2</button>
+                <button data-num class="button">3</button>
+                <button data-num class="button">.</button>
+                <button data-num class="button">(</button>
+                <button data-num class="button">0</button>
+                <button data-num class="button">)</button>
+                <button data-equals class="button">=</button>
             </div>    
         </div>
     </div>
