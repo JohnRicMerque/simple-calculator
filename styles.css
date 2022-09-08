@@ -120,11 +120,18 @@ button:first-of-type:hover,button:last-of-type:hover  {
     justify-content: space-around;
     word-wrap: break-word;
     word-break: break-all;
+}
 
+.current-output, .previous-output {
+    padding: 0.5rem;
 }
 
 .current-output {
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+.previous-output {
+    
 }
 
 /* Extra small devices (phones, 600px and down) */
