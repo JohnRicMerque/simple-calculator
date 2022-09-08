@@ -9,16 +9,38 @@ class Calculator {
         this.clear()
     }
 
+    // appends number to appear on display
     concatNum(number) {
         if (number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
+    // deals with display of decimal places when declared initailly, and no repetition of decimal places 
+    getNumDisplay(number) {
+        const stringNum = number.toString()
+        const intNum = parseFloat(stringNum.split('.')[0])
+        const deciNum = stringNum.split('.')[1]
+        let intDisplay
+        if (isNaN(intNum)) {
+            intDisplay = ''
+        } else {
+            intDisplay = intNum.toLocaleString('en', {maximumFractionDigits: 0})
+        }
+        if(deciNum != null){
+            return `${intDisplay}.${deciNum}`
+        } else {
+            return intDisplay
+        }
+    }
+
+    // updates display every input, makes operation sign visible on display, clears previous display upon equals (when no operation is done) 
     updateDisplay() {
-        this.currentOperandDisplay.innerText = this.currentOperand
-            if (this.operation != null){
-               this.previousOperandDisplay.innerText = `${this.previousOperand} ${this.operation}` 
-            }
+        this.currentOperandDisplay.innerText = this.getNumDisplay(this.currentOperand)
+        if (this.operation != null){
+            this.previousOperandDisplay.innerText = `${this.getNumDisplay(this.previousOperand)} ${this.operation}` 
+        } else {
+            this.previousOperandDisplay.innerText = ''
+        }
     }
 
     clear() {
@@ -31,6 +53,7 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
+    // integrates operation and automates computation if there is a previous operand when selecting an operation
     chooseOperation(operation){
         if (this.currentOperand === '') return
         if (this.previousOperand !== '') {
@@ -64,9 +87,8 @@ class Calculator {
                 return
         }
         this.currentOperand = computation
-        this.opration = undefined
+        this.operation = undefined
         this.previousOperand = ''
-
     }
 }
 
@@ -79,7 +101,7 @@ const allClearBtn = document.querySelector('[data-clear]')
 const deleteBtn = document.querySelector('[data-del]')
 const equalsBtn = document.querySelector('[data-equals]')
 
-// creating instance of object Calculator and assigning methods on corresponding HTML element
+// creating instance of object Calculator and assigning methods on corresponding HTML element (buttons)
 const calculator = new Calculator(previousOperandDisplay, currentOperandDisplay)
 
 numberBtns.forEach(button => {

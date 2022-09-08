@@ -75,7 +75,7 @@
 .calculator {
     display: grid;
     align-content: center;
-    gap: 1px;
+    gap: 4px;
     height: auto;
     max-width: 280px;
     grid-template-columns: repeat(4, 60px);
