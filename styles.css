@@ -108,6 +108,12 @@ button:first-of-type:hover,button:last-of-type:hover  {
     color: var(--main-color-900);
 }
 
+#equals {
+    grid-column: 2 / span 3;
+    border-radius: 4%;
+    font-size: 1.5rem;
+}
+
 .display {
     grid-column: 1 / -1;
     background-color: var(--black-color);
@@ -130,9 +136,6 @@ button:first-of-type:hover,button:last-of-type:hover  {
     font-size: 1.8rem;
 }
 
-.previous-output {
-    
-}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
