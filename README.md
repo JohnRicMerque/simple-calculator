@@ -8,4 +8,4 @@ A simple calculator built using an object oriented approach in JavaScript. Neces
 Link: https://simple-calculator-cndoz9hb8-johnricmerque.vercel.app
 
 # DISCLAIMER
-The scripting for this project was referenced to Web Dev Simplified Youtube Tutorial (https://www.youtube.com/watch?v=j59qQ7YWLxw). This project was done for learning purposes only, I do not claim ownership of the algorithm implemented in this project. However, I personally built the layout and design.
+The scripting for this project was referenced to Web Dev Simplified Youtube Tutorial (https://www.youtube.com/watch?v=j59qQ7YWLxw). This project was done for learning purposes only, I do not claim ownership of the algorithm implemented in this project.
